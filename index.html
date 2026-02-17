@@ -2,86 +2,101 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Vedmatic Presets</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vedmatic</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<div id="main-content">
+
 <header>
-<h1>VEDMATIC</h1>
-<p>Cinematic Presets • LUTs • Professional Editing</p>
+  <h1>VEDMATIC</h1>
+  <p>Cinematic Presets • LUTs • Professional Editing</p>
 </header>
 
 <section class="hero">
-<h2>Transform Your Photos in One Click</h2>
-<button class="btn" onclick="openPayment()">Explore Presets</button>
+  <h2>Transform Your Photos in One Click</h2>
+  <button class="btn" onclick="openPayment()">Explore Presets</button>
 </section>
 
 <section class="presets">
 
-<div class="card">
-<h3>Urban Cinematic Pack</h3>
-<p>5 Lightroom Presets</p>
-<span>₹99</span>
-<button onclick="openPayment()">Buy Now</button>
-</div>
+  <div class="card">
+    <h3>Urban Cinematic Pack</h3>
+    <p>5 Lightroom Presets</p>
+    <span>₹149</span>
+    <button onclick="openPayment()">Buy Now</button>
+  </div>
 
-<div class="card">
-<h3>Film LUT Collection</h3>
-<p>3 Professional LUTs</p>
-<span>₹199</span>
-<button onclick="openPayment()">Buy Now</button>
-</div>
+  <div class="card">
+    <h3>Film LUT Collection</h3>
+    <p>3 Professional LUTs</p>
+    <span>₹249</span>
+    <button onclick="openPayment()">Buy Now</button>
+  </div>
 
 </section>
 
+
+<!-- PROFESSIONAL EDITING SECTION -->
 <section class="services">
-<h2>Professional Photo Editing Services</h2>
-<p>I offer premium cinematic editing for Instagram, brands & creators.</p>
 
-<div class="service-cards">
-<div class="service">
-<h3>Basic Edit</h3>
-<p>Color correction + cinematic tone</p>
-<span>₹49 / photo</span>
-</div>
+  <div class="services-left">
+    <h2>Professional Photo Editing Services</h2>
+    <p>I offer premium cinematic editing for Instagram, brands & creators.</p>
+    <p class="contact">DM on Instagram: <strong>@vedmaticcaptures</strong></p>
+  </div>
 
-<div class="service">
-<h3>Premium Edit</h3>
-<p>Advanced grading + skin retouch + lighting</p>
-<span>₹399 / photo</span>
-</div>
-</div>
+  <div class="services-right">
 
-<p class="contact">
-DM on Instagram: <strong>@vedmaticcaptures</strong>
-</p>
+    <div class="service-card">
+      <h3>Basic Edit</h3>
+      <p>Color correction + cinematic tone</p>
+      <span>₹49 / photo</span>
+    </div>
+
+    <div class="service-card">
+      <h3>Premium Edit</h3>
+      <p>Advanced grading + skin retouch + lighting</p>
+      <span>₹399 / photo</span>
+    </div>
+
+  </div>
+
 </section>
+
+<footer>
+  <p>© 2026 Vedmatic. All rights reserved.</p>
+</footer>
+
+</div>
+
 
 <!-- PAYMENT MODAL -->
 <div id="paymentModal" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closePayment()">&times;</span>
-<h3>Scan & Pay via UPI</h3>
-<img src="qr.png" alt="UPI QR" class="qr">
-<p>UPI ID: <strong>vedantlegacy11@fam</strong></p>
-<p>After payment, send screenshot on Instagram to receive your files.
-    The files may take upto 7-8 hours to get sent
-</p>
-</div>
+  <div class="modal-content">
+    <span class="close" onclick="closePayment()">&times;</span>
+    <h3>Scan & Pay via UPI</h3>
+    <img src="qr.png" class="qr">
+    <p>UPI ID: <strong>yourupi@bank</strong></p>
+    <p>After payment, DM screenshot on Instagram.</p>
+  </div>
 </div>
 
-<footer>
-<p>© 2026 Vedmatic. All rights reserved.</p>
-</footer>
 
 <script>
 function openPayment() {
-document.getElementById("paymentModal").style.display = "flex";
+  document.getElementById("paymentModal").style.display = "flex";
+  document.getElementById("main-content").classList.add("blur-active");
 }
+
 function closePayment() {
-document.getElementById("paymentModal").style.display = "none";
+  document.getElementById("paymentModal").style.display = "none";
+  document.getElementById("main-content").classList.remove("blur-active");
 }
 </script>
 
