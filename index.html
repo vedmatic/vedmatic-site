@@ -1,42 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Vedmatic Presets</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Vedmatic Presets</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <h1>VEDMATIC</h1>
-    <p>Cinematic Presets & LUTs</p>
+<h1>VEDMATIC</h1>
+<p>Cinematic Presets • LUTs • Professional Editing</p>
 </header>
 
 <section class="hero">
-    <h2>Transform Your Photos in One Click</h2>
-    <a href="#presets" class="btn">Explore Presets</a>
+<h2>Transform Your Photos in One Click</h2>
+<button class="btn" onclick="openPayment()">Explore Presets</button>
 </section>
 
-<section id="presets" class="presets">
-    <div class="card">
-        <h3>Urban Cinematic Pack</h3>
-        <p>5 Lightroom Presets</p>
-        <span>₹149</span>
-        <button>Buy Now</button>
-    </div>
+<section class="presets">
 
-    <div class="card">
-        <h3>Film LUT Collection</h3>
-        <p>3 Professional LUTs</p>
-        <span>₹249</span>
-        <button>Buy Now</button>
-    </div>
+<div class="card">
+<h3>Urban Cinematic Pack</h3>
+<p>5 Lightroom Presets</p>
+<span>₹99</span>
+<button onclick="openPayment()">Buy Now</button>
+</div>
+
+<div class="card">
+<h3>Film LUT Collection</h3>
+<p>3 Professional LUTs</p>
+<span>₹199</span>
+<button onclick="openPayment()">Buy Now</button>
+</div>
+
 </section>
+
+<section class="services">
+<h2>Professional Photo Editing Services</h2>
+<p>I offer premium cinematic editing for Instagram, brands & creators.</p>
+
+<div class="service-cards">
+<div class="service">
+<h3>Basic Edit</h3>
+<p>Color correction + cinematic tone</p>
+<span>₹50 / photo</span>
+</div>
+
+<div class="service">
+<h3>Premium Edit</h3>
+<p>Advanced grading + skin retouch + lighting</p>
+<span>₹100 / photo</span>
+</div>
+</div>
+
+<p class="contact">
+DM on Instagram: <strong>@vedmaticcaptures</strong>
+</p>
+</section>
+
+<!-- PAYMENT MODAL -->
+<div id="paymentModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closePayment()">&times;</span>
+<h3>Scan & Pay via UPI</h3>
+<img src="qr.png" alt="UPI QR" class="qr">
+<p>UPI ID: <strong>vedantlegacy11@fam</strong></p>
+<p>After payment, send screenshot on Instagram to receive your files.</p>
+</div>
+</div>
 
 <footer>
-    <p>© 2026 Vedmatic. All rights reserved.</p>
+<p>© 2026 Vedmatic. All rights reserved.</p>
 </footer>
+
+<script>
+function openPayment() {
+document.getElementById("paymentModal").style.display = "flex";
+}
+function closePayment() {
+document.getElementById("paymentModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
