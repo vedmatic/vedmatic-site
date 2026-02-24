@@ -11,8 +11,6 @@
 
 <body>
 
-<div id="main-content">
-
 <header>
   <h1>VEDMATIC</h1>
   <p>Cinematic Presets • LUTs • Professional Editing</p>
@@ -20,86 +18,122 @@
 
 <section class="hero">
   <h2>Transform Your Photos in One Click</h2>
-  <button class="btn" onclick="openPayment()">Explore Presets</button>
+  <button class="btn" onclick="scrollToComparison()">Explore Presets</button>
 </section>
 
 <section class="presets">
-
   <div class="card">
     <h3>Urban Cinematic Pack</h3>
-    <p>5 Lightroom Presets</p>
+    <p>Includes all 5 presets below</p>
     <span>₹149</span>
-    <button onclick="openPayment()">Buy Now</button>
+    <button onclick="openModal()">Buy Now</button>
+  </div>
+</section>
+
+<section id="comparison" class="comparison-section">
+
+  <h2 class="compare-title">See The Transformation</h2>
+
+  <!-- Blue V1 -->
+  <div class="comparison-wrapper">
+    <h3>Blue V1</h3>
+    <div class="img-compare">
+      <img src="before1.jpg" class="before">
+      <img src="after1.jpg" class="after">
+      <div class="slider-line"></div>
+      <input type="range" min="0" max="100" value="50" class="slider">
+    </div>
   </div>
 
-  <div class="card">
-    <h3>Film LUT Collection</h3>
-    <p>3 Professional LUTs</p>
-    <span>₹249</span>
-    <button onclick="openPayment()">Buy Now</button>
+  <!-- VOX24 -->
+  <div class="comparison-wrapper">
+    <h3>VOX24</h3>
+    <div class="img-compare">
+      <img src="before2.jpg" class="before">
+      <img src="after2.jpg" class="after">
+      <div class="slider-line"></div>
+      <input type="range" min="0" max="100" value="50" class="slider">
+    </div>
+  </div>
+
+  <!-- Portrait Subject -->
+  <div class="comparison-wrapper">
+    <h3>Portrait Subject</h3>
+    <div class="img-compare">
+      <img src="before3.jpg" class="before">
+      <img src="after3.jpg" class="after">
+      <div class="slider-line"></div>
+      <input type="range" min="0" max="100" value="50" class="slider">
+    </div>
+  </div>
+
+  <!-- 4K Texture -->
+  <div class="comparison-wrapper">
+    <h3>4K Texture</h3>
+    <div class="img-compare">
+      <img src="before4.jpg" class="before">
+      <img src="after4.jpg" class="after">
+      <div class="slider-line"></div>
+      <input type="range" min="0" max="100" value="50" class="slider">
+    </div>
+  </div>
+
+  <!-- Scenery Enhance -->
+  <div class="comparison-wrapper">
+    <h3>Scenery Enhance</h3>
+    <div class="img-compare">
+      <img src="before5.jpg" class="before">
+      <img src="after5.jpg" class="after">
+      <div class="slider-line"></div>
+      <input type="range" min="0" max="100" value="50" class="slider">
+    </div>
   </div>
 
 </section>
-
-
-<!-- PROFESSIONAL EDITING SECTION -->
-<section class="services">
-
-  <div class="services-left">
-    <h2>Professional Photo Editing Services</h2>
-    <p>I offer premium cinematic editing for Instagram, brands & creators.</p>
-    <p class="contact">DM on Instagram: <strong>@vedmaticcaptures</strong></p>
-  </div>
-
-  <div class="services-right">
-
-    <div class="service-card">
-      <h3>Basic Edit</h3>
-      <p>Color correction + cinematic tone</p>
-      <span>₹49 / photo</span>
-    </div>
-
-    <div class="service-card">
-      <h3>Premium Edit</h3>
-      <p>Advanced grading + skin retouch + lighting</p>
-      <span>₹399 / photo</span>
-    </div>
-
-  </div>
-
-</section>
-
-<footer>
-  <p>© 2026 Vedmatic. All rights reserved.</p>
-</footer>
-
-</div>
-
 
 <!-- PAYMENT MODAL -->
-<div id="paymentModal" class="modal">
+<div class="modal" id="modal">
   <div class="modal-content">
-    <span class="close" onclick="closePayment()">&times;</span>
+    <span class="close" onclick="closeModal()">×</span>
     <h3>Scan & Pay via UPI</h3>
     <img src="qr.png" class="qr">
-    <p>UPI ID: <strong>vedantlegacy11@fam</strong></p>
+    <p>UPI ID: <strong>yourupi@bank</strong></p>
     <p>After payment, DM screenshot on Instagram.</p>
   </div>
 </div>
 
-
 <script>
-function openPayment() {
-  document.getElementById("paymentModal").style.display = "flex";
-  document.getElementById("main-content").classList.add("blur-active");
+
+function scrollToComparison() {
+  document.getElementById("comparison").scrollIntoView({
+    behavior: "smooth"
+  });
 }
 
-function closePayment() {
-  document.getElementById("paymentModal").style.display = "none";
-  document.getElementById("main-content").classList.remove("blur-active");
+function openModal() {
+  document.getElementById("modal").style.display = "flex";
 }
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+document.querySelectorAll(".img-compare").forEach(container => {
+
+  const slider = container.querySelector(".slider");
+  const after = container.querySelector(".after");
+  const line = container.querySelector(".slider-line");
+
+  slider.addEventListener("input", function() {
+    const value = this.value;
+
+    after.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+    line.style.left = value + "%";
+  });
+
+});
+
 </script>
 
 </body>
 </html>
-
