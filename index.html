@@ -11,81 +11,74 @@
 
 <body>
 
+<!-- HEADER -->
 <header>
   <h1>VEDMATIC</h1>
   <p>Cinematic Presets • LUTs • Professional Editing</p>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <h2>Transform Your Photos in One Click</h2>
-  <button class="btn" onclick="scrollToComparison()">Explore Presets</button>
+  <a href="#comparison" class="btn">Explore Presets</a>
 </section>
 
+<!-- PRESET CARD -->
 <section class="presets">
   <div class="card">
     <h3>Urban Cinematic Pack</h3>
     <p>Includes all 5 presets below</p>
-    <span>₹149.99</span>
+    <span>₹149</span>
     <button onclick="openModal()">Buy Now</button>
   </div>
 </section>
 
-<section id="comparison" class="comparison-section">
-
+<!-- COMPARISON SECTION -->
+<section class="comparison-section" id="comparison">
   <h2 class="compare-title">See The Transformation</h2>
 
-  <!-- Blue V1 -->
-  <div class="comparison-wrapper">
+  <!-- 1 -->
+  <div class="compare-card">
     <h3>Blue V1</h3>
-    <div class="img-compare">
-      <img src="before1.jpg" class="before">
-      <img src="after1.jpg" class="after">
-      <div class="slider-line"></div>
-      <input type="range" min="0" max="100" value="50" class="slider">
+    <div class="compare-images">
+      <img src="before1.jpg" alt="Before 1">
+      <img src="after1.jpg" alt="After 1">
     </div>
   </div>
 
-  <!-- VOX24 -->
-  <div class="comparison-wrapper">
+  <!-- 2 -->
+  <div class="compare-card">
     <h3>VOX24</h3>
-    <div class="img-compare">
-      <img src="before2.jpg" class="before">
-      <img src="after2.jpg" class="after">
-      <div class="slider-line"></div>
-      <input type="range" min="0" max="100" value="50" class="slider">
+    <div class="compare-images">
+      <img src="before2.jpg" alt="Before 2">
+      <img src="after2.jpg" alt="After 2">
     </div>
   </div>
 
-  <!-- Portrait Subject -->
-  <div class="comparison-wrapper">
+  <!-- 3 -->
+  <div class="compare-card">
     <h3>Portrait Subject</h3>
-    <div class="img-compare">
-      <img src="before3.jpg" class="before">
-      <img src="after3.jpg" class="after">
-      <div class="slider-line"></div>
-      <input type="range" min="0" max="100" value="50" class="slider">
+    <div class="compare-images">
+      <img src="before3.jpg" alt="Before 3">
+      <img src="after3.jpg" alt="After 3">
     </div>
   </div>
 
-  <!-- 4K Texture -->
-  <div class="comparison-wrapper">
+  <!-- 4 -->
+  <div class="compare-card">
     <h3>4K Texture</h3>
-    <div class="img-compare">
-      <img src="before4.jpg" class="before">
-      <img src="after4.jpg" class="after">
-      <div class="slider-line"></div>
-      <input type="range" min="0" max="100" value="50" class="slider">
+    <div class="compare-images">
+      <img src="before4.jpg" alt="Before 4">
+      <img src="after4.jpg" alt="After 4">
     </div>
   </div>
 
-  <!-- Scenery Enhance -->
-  <div class="comparison-wrapper">
+  <!-- 5 -->
+  <div class="compare-card">
     <h3>Scenery Enhance</h3>
-    <div class="img-compare">
-      <img src="before5.jpg" class="before">
-      <img src="after5.jpg" class="after">
-      <div class="slider-line"></div>
-      <input type="range" min="0" max="100" value="50" class="slider">
+    <div class="compare-images">
+      <img src="before5.jpg" alt="Before 5">
+      <img src="after5.jpg" alt="After 5">
     </div>
   </div>
 
@@ -102,14 +95,11 @@
   </div>
 </div>
 
+<footer>
+  <p>© 2026 Vedmatic. All rights reserved.</p>
+</footer>
+
 <script>
-
-function scrollToComparison() {
-  document.getElementById("comparison").scrollIntoView({
-    behavior: "smooth"
-  });
-}
-
 function openModal() {
   document.getElementById("modal").style.display = "flex";
 }
@@ -117,24 +107,7 @@ function openModal() {
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
-
-document.querySelectorAll(".img-compare").forEach(container => {
-
-  const slider = container.querySelector(".slider");
-  const after = container.querySelector(".after");
-  const line = container.querySelector(".slider-line");
-
-  slider.addEventListener("input", function() {
-    const value = this.value;
-
-    after.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
-    line.style.left = value + "%";
-  });
-
-});
-
 </script>
 
 </body>
-
 </html>
