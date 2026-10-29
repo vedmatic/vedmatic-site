@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vedmatic – Cinematic Lightroom Presets & LUTs</title>
+<meta name="description" content="Vedmatic is a photography and colour-grading brand. See real before/after results from the Urban Cinematic Pack, five cinematic presets.">
+<link rel="canonical" href="https://vedmatic.github.io/vedmatic-site/">
+<meta property="og:title" content="Vedmatic – Cinematic Presets & LUTs">
+<meta property="og:description" content="Make every frame feel like cinema. Explore the Urban Cinematic Pack.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vedmatic.github.io/vedmatic-site/">
+<meta property="og:image" content="https://vedmatic.github.io/vedmatic-site/after1.jpg">
+<meta name="theme-color" content="#070606">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070606'/%3E%3Cpath d='M12 18l20 30 20-30' stroke='%23ff2e2e' stroke-width='8' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Vedmatic home">VEDMATIC</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span></button>
+  <nav id="menu" aria-label="Main">
+    <a href="#pack">The pack</a><a href="#compare">Before &amp; after</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a>
+    <a class="pill mag" href="#pack">Buy ₹<span data-price-text>149</span></a>
+  </nav>
+</header>
 
+<main id="main">
+<section class="hero" id="top">
+  <canvas id="ink" aria-hidden="true"></canvas>
+  <img class="hero-img" src="after1.jpg" alt="Brooklyn Bridge and Manhattan skyline at blue hour, graded with Vedmatic" fetchpriority="high">
+  <div class="hero-copy">
+    <p class="kicker">Cinematic presets &amp; LUTs</p>
+    <h1 aria-label="Make every frame feel like cinema."><span class="ln"><i>MAKE</i> <i>EVERY</i></span><span class="ln"><i>FRAME</i> <i>FEEL</i></span><span class="ln"><i>LIKE</i> <i class="red">CINEMA.</i></span></h1>
+    <p class="sub">Intentional contrast. Controlled colour. Professional editing, in one click.</p>
+    <div class="cta"><a class="btn mag" href="#compare">See the transformation</a><a class="btn ghost mag" href="#pack">Get the pack</a></div>
+  </div>
+</section>
+
+<section class="pack" id="pack">
+  <div class="pack-text">
+    <h2>Urban Cinematic Pack</h2>
+    <p>Five presets, each shown below on a real photograph: Blue V1, VOX24, Portrait Subject, 4K Texture and Scenery Enhance.</p>
+    <p class="price">₹<span id="price" data-price="149">149</span></p>
+    <button class="btn mag" id="buy">Buy now</button>
+    <p class="small">Pay by UPI, then send proof on Instagram.</p>
+  </div>
+  <div class="stage" id="stage">
+    <div class="tilt" id="tilt">
+      <img class="p1" src="after3.jpg" alt="Portrait graded with Portrait Subject preset" loading="lazy">
+      <img class="p2" src="after1.jpg" alt="Skyline graded with Blue V1 preset" loading="lazy">
+      <img class="p3" src="after4.jpg" alt="Sunset graded with Scenery Enhance preset" loading="lazy">
+      <div class="glass tag">Urban Cinematic Pack · 5 presets</div>
+    </div>
+  </div>
+</section>
+
+<section class="compare" id="compare">
+  <h2>See the transformation</h2>
+  <p class="lead">Drag the handle, or focus a slider and use the arrow keys.</p>
+  <div id="sliders"></div>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2>Gallery</h2>
+  <div class="strip" id="strip" tabindex="0" aria-label="Graded photographs, scroll horizontally"></div>
+</section>
+
+<section class="flow" aria-labelledby="fh">
+  <h2 id="fh">How it works</h2>
+  <ol>
+    <li><b>Explore</b> the five presets in the gallery.</li>
+    <li><b>Compare</b> each result against its untouched original.</li>
+    <li><b>Buy</b> by paying through UPI.</li>
+    <li><b>Send proof</b> to @vedmaticcaptures on Instagram.</li>
+  </ol>
+</section>
+
+<section class="faq" id="faq">
+  <h2>FAQ</h2>
+  <details><summary>What is in the pack?</summary><p>The five presets shown on this page: Blue V1, VOX24, Portrait Subject, 4K Texture and Scenery Enhance.</p></details>
+  <details><summary>How do I pay?</summary><p>Press Buy now, scan the UPI QR or copy the UPI ID, and pay the listed amount. Payments are not verified on this site.</p></details>
+  <details><summary>What happens after I pay?</summary><p>Send a screenshot of your payment to @vedmaticcaptures on Instagram. Everything after that happens in that conversation.</p></details>
+</section>
+
+<section class="about">
+  <h2>About Vedmatic</h2>
+  <p>Vedmatic is a photography and colour-grading brand making cinematic Lightroom presets and LUTs. Every result on this page is from a real photograph.</p>
+  <a class="btn ghost mag" href="https://instagram.com/vedmaticcaptures" target="_blank" rel="noopener">@vedmaticcaptures on Instagram</a>
+</section>
+</main>
+
+<footer><p>© 2026 Vedmatic. All rights reserved.</p></footer>
+
+<dialog id="modal" aria-labelledby="mt">
+  <button class="close" id="close" aria-label="Close">×</button>
+  <h3 id="mt">Pay ₹<span data-price-text>149</span> via UPI</h3>
+  <img class="qr" src="qr.png" alt="UPI payment QR code" width="200" height="200">
+  <p>UPI ID: <strong id="upi">vedantlegacy11@fam</strong></p>
+  <div class="row"><button class="btn mag" id="copy">Copy UPI ID</button><a class="btn ghost" id="upilink" href="#">Open UPI app</a></div>
+  <p class="small" id="copymsg" role="status"></p>
+  <p>After paying, send a screenshot to <a href="https://instagram.com/vedmaticcaptures" target="_blank" rel="noopener">@vedmaticcaptures</a> on Instagram. This site cannot confirm payments.</p>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
